@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import getHeroesByPublisher from "../../Selectors/getHeroesByPublisher";
 import HeroCard from './HeroCard';
 
@@ -6,7 +7,7 @@ type Props = {
 };
 
 const HeroesList = ({ publisher }: Props) => {
-  const heroes = getHeroesByPublisher( publisher );
+  const heroes = useMemo(() => getHeroesByPublisher( publisher ), [ publisher ]);
 
   return (
     <div className="row rows-cols-1 g-3">

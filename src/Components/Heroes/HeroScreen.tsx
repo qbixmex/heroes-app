@@ -1,14 +1,18 @@
+import { useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { Hero } from "../../Interfaces";
 import getHeroById from "../../Selectors/getHeroById";
 
 
 const HeroScreen = () => {
+  
   const { id: paramId } = useParams();
+
+  const hero: Hero | undefined = useMemo(() => getHeroById( paramId! ), [ paramId ]);
+  
   const navigate = useNavigate();
 
-  const hero = paramId && getHeroById( paramId );
-
-  if( !hero ) {
+  if ( !hero ) {
     return <Navigate to="/" />
   }
 
