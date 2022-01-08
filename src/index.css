@@ -28,8 +28,7 @@ html, body {
 
 body {
   background-color: var(--dark);
-  color: #fff;
-  padding: .75rem 0;
+  color: var(--white);
 }
 
 .blue {
