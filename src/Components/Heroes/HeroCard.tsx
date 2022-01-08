@@ -28,7 +28,7 @@ const HeroCard = ({
         className="text-decoration-none"
         title="More Details"
       >
-        <div className="card text-dark">
+        <div className="card text-dark mb-4">
           <div className="row no-gutters">
             <div className="col-12">
               <img className="img-fluid rounded" src={ imagePath } alt={ superhero } />
