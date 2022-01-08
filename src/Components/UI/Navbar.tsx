@@ -1,9 +1,13 @@
 import React from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, useNavigate } from 'react-router-dom'
 
 export const Navbar = () => {
+  const navigate = useNavigate();
+
   const handleLogout= () => {
-    console.log("Logged Out");
+    navigate("/login", {
+      replace: true
+    });
   };
 
   return (
@@ -33,7 +37,7 @@ export const Navbar = () => {
       <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
         <ul className="navbar-nav mr-auto">
           <li className='nav-item'>
-            <button className="nav-link btn">Daniel González</button>
+            <button className="nav-link btn text-info">Daniel González</button>
           </li>
           <li className="nav-item">
             <button
