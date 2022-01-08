@@ -23,33 +23,24 @@ const HeroCard = ({
 
   return (
     <div className="col-12 col-md-6 col-lg-4 col-xl-3">
-      <div className="card text-dark">
-        <div className="row no-gutters">
-          <div className="col-12">
-            <img className="img-fluid rounded" src={ imagePath } alt={ superhero } />
-          </div>
-          <div className="col-12">
-            <div className="card-body">
-              <p className="display-5 text-center">{ superhero }</p>
-              <div className="text-end">
-                <p className="card-text">{ alter_ego }</p>
-                <p className="card-text">
-                  {
-                    ( alter_ego !== characters ) && <p className="text-muted">{ characters }</p>
-                  }
-                </p>
-                <p className="card-text">
-                  <small className="text-muted">{ first_appearance }</small>
-                </p>
-
-                <Link to={ `/hero/${ id }` } className="btn btn-outline-primary">
-                  details...
-                </Link>
+      <Link
+        to={ `/hero/${ id }` }
+        className="text-decoration-none"
+        title="More Details"
+      >
+        <div className="card text-dark">
+          <div className="row no-gutters">
+            <div className="col-12">
+              <img className="img-fluid rounded" src={ imagePath } alt={ superhero } />
+            </div>
+            <div className="col-12">
+              <div className="card-body">
+                <h1 className="display-5 text-center">{ superhero }</h1>
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

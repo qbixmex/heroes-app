@@ -29,6 +29,7 @@ html, body {
 body {
   background-color: var(--dark);
   color: var(--white);
+  margin-bottom: 2rem;
 }
 
 .blue {

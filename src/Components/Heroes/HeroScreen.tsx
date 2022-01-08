@@ -1,22 +1,80 @@
-import { Navigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 import getHeroById from "../../Selectors/getHeroById";
 
 
 const HeroScreen = () => {
-  const { id } = useParams();
+  const { id: paramId } = useParams();
+  const navigate = useNavigate();
 
-  const hero = id && getHeroById( id );
+  const hero = paramId && getHeroById( paramId );
 
   if( !hero ) {
     return <Navigate to="/" />
   }
 
+  const {
+    id,
+    superhero,
+    publisher,
+    alter_ego,
+    first_appearance,
+    characters
+  } = hero;
+
+  const handleReturn = (): void => {
+    navigate( -1 );
+  };
+
   return (
-    <>
-      <h1 className="text-center display-1 green">
-        { hero.superhero }
-      </h1>
-    </>
+    <div className="row mt-5">
+      <div className="col-12 col-md-4">
+        <img
+          className="img-thumbnail"
+          src={ `/assets/${ id }.jpg` }
+          alt={ superhero }
+          title={ superhero }
+        />
+      </div>
+      <div className="col-12 col-md-8">
+        <h1 className="text-center display-4 green mt-4 mt-md-0 mb-4">
+          { superhero }
+        </h1>
+        <table className="table table-dark">
+          <tbody>
+            <tr>
+              <th>Alter Ego</th>
+              <td>{ alter_ego }</td>
+            </tr>
+            <tr>
+              <th>Publisher</th>
+              <td>{ publisher }</td>
+            </tr>
+            <tr>
+              <th>First Appearance</th>
+              <td>{ first_appearance }</td>
+            </tr>
+            <tr>
+              {
+                ( alter_ego !== characters ) &&
+                <>
+                  <th>Characters</th>
+                  <td className="text-muted">{ characters }</td>
+                </>
+              }
+            </tr>
+          </tbody>
+        </table>
+
+        <div className="text-end">
+          <button
+            className="btn btn-outline-primary"
+            onClick={ handleReturn }
+          >
+            Back
+          </button>
+        </div>
+      </div>
+    </div>
   );
 };
 
