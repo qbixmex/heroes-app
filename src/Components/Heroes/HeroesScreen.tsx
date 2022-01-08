@@ -1,7 +1,8 @@
 import { useMemo } from "react";
+import "animate.css";
+
 import getHeroesByPublisher from "../../Selectors/getHeroesByPublisher";
 import HeroCard from './HeroCard';
-import "animate.css";
 
 type Props = {
   publisher: string;

@@ -10,19 +10,9 @@ type Props = {
   characters: Hero["characters"];
 };
 
-const HeroCard = ({
-  id,
-  superhero,
-  publisher,
-  alter_ego,
-  first_appearance,
-  characters
-}: Props) => {
-
-  const imagePath = `/assets/${ id }.jpg`;
-
+const HeroCard = ({ id, superhero }: Props) => {
   return (
-    <div className="col-12 col-md-6 col-lg-4 col-xl-3">
+    <div className="col-12 col-md-6 col-lg-4 col-xl-3 animate__animated animate__fadeIn">
       <Link
         to={ `/hero/${ id }` }
         className="text-decoration-none"
@@ -31,11 +21,11 @@ const HeroCard = ({
         <div className="card text-dark mb-4">
           <div className="row no-gutters">
             <div className="col-12">
-              <img className="img-fluid rounded" src={ imagePath } alt={ superhero } />
+              <img className="img-fluid rounded" src={ `/assets/${ id }.jpg` } alt={ superhero } />
             </div>
             <div className="col-12">
               <div className="card-body">
-                <h1 className="display-5 text-center">{ superhero }</h1>
+                <h1 className="text-center dark">{ superhero }</h1>
               </div>
             </div>
           </div>
