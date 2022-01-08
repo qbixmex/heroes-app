@@ -1,5 +1,5 @@
 import { Hero } from "../Interfaces";
-import Heroes from "../Data/Heroes";
+import heroes from "../Data/heroes";
 
 const getHeroesByPublisher = ( publisher: string ): Hero[] => {
   const validPublishers = ["DC Comics", "Marvel Comics"];
@@ -8,7 +8,7 @@ const getHeroesByPublisher = ( publisher: string ): Hero[] => {
     throw new Error(`${ publisher } is not a valid publisher`);
   }
 
-  return Heroes.filter( hero => hero.publisher === publisher);
+  return heroes.filter( hero => hero.publisher === publisher);
 };
 
 export default getHeroesByPublisher;

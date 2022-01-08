@@ -1,4 +1,4 @@
-const Heroes = [
+const heroes = [
   {
     id: "dc-batman",
     superhero: "Batman",
@@ -162,4 +162,4 @@ const Heroes = [
   },
 ];
 
-export default Heroes;
+export default heroes;
