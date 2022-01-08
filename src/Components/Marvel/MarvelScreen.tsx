@@ -1,8 +1,15 @@
+import HeroesList from "../Heroes/HeroesScreen";
+
 const MarvelScreen = () => {
   return (
-    <div>
-      <h1 className="text-center display-1 green">Marvel Screen</h1>
-    </div>
+    <>
+      <h1 className="text-center display-1 green">
+        Marvel Screen
+      </h1>
+      <hr />
+
+      <HeroesList publisher="Marvel Comics" />
+    </>
   );
 };
 
