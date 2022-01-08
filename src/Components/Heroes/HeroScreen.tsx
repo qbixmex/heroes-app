@@ -2,6 +2,7 @@ import { useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 import { Hero } from "../../Interfaces";
 import getHeroById from "../../Selectors/getHeroById";
+import "animate.css";
 
 
 const HeroScreen = () => {
@@ -33,13 +34,13 @@ const HeroScreen = () => {
     <div className="row mt-5">
       <div className="col-12 col-md-4">
         <img
-          className="img-thumbnail"
+          className="img-thumbnail animate__animated animate__fadeInLeft"
           src={ `/assets/${ id }.jpg` }
           alt={ superhero }
           title={ superhero }
         />
       </div>
-      <div className="col-12 col-md-8">
+      <div className="col-12 col-md-8 animate__animated animate__fadeInRight">
         <h1 className="text-center display-4 green mt-4 mt-md-0 mb-4">
           { superhero }
         </h1>
