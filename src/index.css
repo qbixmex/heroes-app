@@ -1,13 +1,73 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --blue: hsl(216, 98%, 52%);
+  --indigo: hsl(263, 90%, 51%);
+  --purple: hsl(260, 80%, 60%);
+  --pink: hsl(330, 67%, 52%);
+  --red: hsl(354, 70%, 54%);
+  --orange: hsl(27, 98%, 54%);
+  --yellow: hsl(45, 100%, 51%);
+  --green: hsl(152, 80%, 40%);
+  --teal: hsl(162, 73%, 46%);
+  --cyan: hsl(190, 90%, 50%);
+  --white: hsl(0, 0%, 100%);
+  --gray: hsl(208, 7%, 46%);
+  --gray-dark: hsl(210, 10%, 23%);
+  --primary: hsl(216, 98%, 52%);
+  --secondary: hsl(208, 7%, 46%);
+  --success: hsl(152, 69%, 31%);
+  --info: hsl(190, 90%, 50%);
+  --warning: hsl(45, 100%, 51%);
+  --danger: hsl(354, 70%, 54%);
+  --light: hsl(210, 17%, 98%);
+  --dark: hsl(210, 10%, 10%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+html, body {
+  font-size: 16px;
+}
+
+body {
+  background-color: var(--dark);
+  color: #fff;
+  padding: .75rem 0;
+}
+
+.blue {
+  color: var(--blue);
+}
+
+.green {
+  color: var(--green);
+}
+
+.orange {
+  color: var(--orange);
+}
+
+.purple {
+  color: var(--purple);
+}
+
+.violet {
+  color: var(--violet);
+}
+
+.indigo {
+  color: var(--indigo);
+}
+
+.pink {
+  color: var(--pink);
+}
+
+.red {
+  color: var(--danger);
+}
+
+.white {
+  color: var(--white);
+}
+
+.black {
+  color: var(--black);
 }
