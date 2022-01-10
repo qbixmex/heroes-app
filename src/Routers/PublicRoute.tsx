@@ -6,12 +6,12 @@ type Props = {
   children: JSX.Element
 };
 
-const PrivateRoute = ({ children }: Props): JSX.Element => {
+const PublicRoute = ({ children }: Props): JSX.Element => {
   const { user } = useContext( AuthContext );
 
   return user.logged
-    ? children
-    : <Navigate to="/login" />;
-};
+    ? <Navigate to="/" />
+    : children;
+}
 
-export default PrivateRoute;
+export default PublicRoute;
