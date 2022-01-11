@@ -5,7 +5,8 @@ export type AuthState = {
 
 export type AuthAction =
   | { type: types.login, payload: AuthState }
-  | { type: types.logout };
+  | { type: types.logout }
+  | { type: null };
 
 export enum types {
   login = "[auth] Login",
