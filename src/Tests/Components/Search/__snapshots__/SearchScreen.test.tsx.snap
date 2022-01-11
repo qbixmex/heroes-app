@@ -1,0 +1,64 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tests on SearchScreen Should match with snapshot with default values 1`] = `
+<div>
+  <h1
+    className="text-center display-1 green"
+    id="searchTitle"
+  >
+    Search Screen
+  </h1>
+  <hr />
+  <div
+    className="animate__animated animate__fadeIn"
+  >
+    <form
+      onSubmit={[Function]}
+    >
+      <div
+        className="row mb-5"
+      >
+        <div
+          className="col-12 col-md-10 mb-3 mb-md-0"
+        >
+          <input
+            autoComplete="off"
+            className="form-control"
+            id="search"
+            name="searchText"
+            onChange={[Function]}
+            placeholder="Search a hero ..."
+            type="text"
+            value=""
+          />
+        </div>
+        <div
+          className="col-12 col-md-2"
+        >
+          <div
+            className="d-grid"
+          >
+            <button
+              className="btn btn-outline-primary"
+              type="submit"
+            >
+              Search
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+    <div
+      className="row"
+    >
+      <div
+        className="alert alert-info text-center mt-3"
+      >
+        <b>
+          Type your favorite hero above
+        </b>
+      </div>
+    </div>
+  </div>
+</div>
+`;
