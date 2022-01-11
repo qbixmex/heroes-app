@@ -27,7 +27,7 @@ const SearchScreen = () => {
 
   return (
     <div>
-      <h1 className="text-center display-1 green">Search Screen</h1>
+      <h1 id="searchTitle" className="text-center display-1 green">Search Screen</h1>
       <hr />
 
       <div className="animate__animated animate__fadeIn">

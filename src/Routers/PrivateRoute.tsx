@@ -14,7 +14,7 @@ const PrivateRoute = ({ children }: Props): JSX.Element => {
 
   return user.logged
     ? children
-    : <Navigate to="/" />;
+    : <Navigate to="/login" />;
 };
 
 export default PrivateRoute;

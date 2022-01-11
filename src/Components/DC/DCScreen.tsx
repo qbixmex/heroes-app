@@ -3,7 +3,7 @@ import HeroesList from "../Heroes/HeroesScreen";
 const DCScreen = () => {
   return (
     <>
-      <h1 className="text-center display-1 green">
+      <h1 id="dcTitle" className="text-center display-1 green">
         DC Screen
       </h1>
       <hr />
