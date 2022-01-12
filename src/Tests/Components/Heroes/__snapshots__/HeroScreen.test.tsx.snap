@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test on HeroScreen Should a hero if param exists and it was founded 1`] = `
+<div
+  className="row mt-5"
+>
+  <div
+    className="col-12 col-md-4"
+  >
+    <img
+      alt="Spider Man"
+      className="img-thumbnail animate__animated animate__fadeInLeft"
+      src="/assets/marvel-spider.jpg"
+      title="Spider Man"
+    />
+  </div>
+  <div
+    className="col-12 col-md-8 animate__animated animate__fadeInRight"
+  >
+    <h1
+      className="text-center display-4 green mt-4 mt-md-0 mb-4"
+    >
+      Spider Man
+    </h1>
+    <table
+      className="table table-dark"
+    >
+      <tbody>
+        <tr>
+          <th>
+            Alter Ego
+          </th>
+          <td>
+            Peter Parker
+          </td>
+        </tr>
+        <tr>
+          <th>
+            Publisher
+          </th>
+          <td>
+            Marvel Comics
+          </td>
+        </tr>
+        <tr>
+          <th>
+            First Appearance
+          </th>
+          <td>
+            Amazing Fantasy #15
+          </td>
+        </tr>
+        <tr />
+      </tbody>
+    </table>
+    <div
+      className="text-end"
+    >
+      <button
+        className="btn btn-outline-primary"
+        onClick={[Function]}
+      >
+        Back
+      </button>
+    </div>
+  </div>
+</div>
+`;
