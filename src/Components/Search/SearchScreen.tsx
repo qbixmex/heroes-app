@@ -63,7 +63,7 @@ const SearchScreen = () => {
                 <b>Type your favorite hero above</b>
               </div>
             : ( heroes?.length === 0 ) &&
-              <div className="alert alert-danger text-center mt-3">
+              <div id="noResults" className="alert alert-danger text-center mt-3">
                 <b>There's no results with "{ q }"</b>
               </div>
           }
