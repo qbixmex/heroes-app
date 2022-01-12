@@ -11,7 +11,7 @@ export const Navbar = () => {
   const handleLogout= () => {
     dispatch({ type: types.logout });
 
-   localStorage.removeItem("user");
+    localStorage.removeItem("user");
 
     navigate("/login", {
       replace: true

@@ -35,14 +35,17 @@ describe("Tests on Navbar", () => {
 
   test("Should match with snapshot", () => {
     const username = wrapper.find(".text-info").text().trim()
+
     expect( wrapper ).toMatchSnapshot();
     expect( username ).toBe( contextValue.user.name );
   });
 
   test("Should call logout and call navigate with dispatch with arguments", () => {
-    const mockEvent = {} as React.MouseEvent<HTMLInputElement>;
+    const mockEvent = {} as React.MouseEvent<HTMLButtonElement>;
     wrapper.find("#logout").prop<React.MouseEventHandler>("onClick")(mockEvent);
+
     expect( contextValue.dispatch ).toHaveBeenCalledWith({ type: types.logout });
     expect( mockNavigate ).toHaveBeenCalledWith( "/login", { "replace": true } );
   });
+
 });
