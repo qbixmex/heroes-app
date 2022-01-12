@@ -79,8 +79,8 @@ describe("Tests on SearchScreen", () => {
       }
     });
 
-    const formSubmit = wrapper.find("form").prop("onSubmit")!;
-    
+    const formSubmit = wrapper.find("form").prop<React.FormEventHandler>("onSubmit");
+
     const mockEvent = {
       preventDefault: () => {}
     } as React.FormEvent<HTMLFormElement>;

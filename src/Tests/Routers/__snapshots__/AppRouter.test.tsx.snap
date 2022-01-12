@@ -82,6 +82,7 @@ Array [
         >
           <button
             className="nav-link btn"
+            id="logout"
             onClick={[Function]}
           >
             Logout

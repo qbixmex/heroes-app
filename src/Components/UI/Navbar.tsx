@@ -11,7 +11,7 @@ export const Navbar = () => {
   const handleLogout= () => {
     dispatch({ type: types.logout });
 
-    localStorage.removeItem("user");
+   localStorage.removeItem("user");
 
     navigate("/login", {
       replace: true
@@ -56,6 +56,7 @@ export const Navbar = () => {
           </li>
           <li className="nav-item">
             <button
+              id="logout"
               className="nav-link btn"
               onClick={ handleLogout }
             >
