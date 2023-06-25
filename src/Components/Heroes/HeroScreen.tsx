@@ -2,7 +2,6 @@ import { useMemo } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 
 import getHeroById from "../../Selectors/getHeroById";
-import heroesImages from "../../Helpers/HeroesImages";
 import "animate.css";
 
 // Just one static resource
@@ -38,7 +37,7 @@ const HeroScreen = () => {
       <div className="col-12 col-md-4">
         <img
           className="img-thumbnail animate__animated animate__fadeInLeft"
-          src={ heroesImages(`./${ id }.jpg`) }
+          src={ require(`../../Assets/heroes/${id}.jpg`) }
           alt={ superhero }
           title={ superhero }
         />

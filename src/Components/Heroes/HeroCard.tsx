@@ -1,6 +1,5 @@
 import { Hero } from "../../Interfaces";
 import { Link } from "react-router-dom";
-import heroesImages from '../../Helpers/HeroesImages';
 
 type Props = {
   id: Hero["id"];
@@ -22,7 +21,11 @@ const HeroCard = ({ id, superhero }: Props) => {
         <div className="card text-dark mb-4">
           <div className="row no-gutters">
             <div className="col-12">
-              <img className="img-fluid rounded" src={ heroesImages(`./${ id }.jpg`) } alt={ superhero } />
+              <img
+                className="img-fluid rounded"
+                src={ require(`../../Assets/heroes/${id}.jpg`) }
+                alt={superhero}
+              />
             </div>
             <div className="col-12">
               <div className="card-body">
