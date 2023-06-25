@@ -37,7 +37,7 @@ const HeroScreen = () => {
       <div className="col-12 col-md-4">
         <img
           className="img-thumbnail animate__animated animate__fadeInLeft"
-          src={ require(`../../Assets/heroes/${id}.jpg`) }
+          src={`/images/heroes/${id}.jpg`}
           alt={ superhero }
           title={ superhero }
         />

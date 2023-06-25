@@ -1,8 +1,8 @@
 {
-  "homepage": "https://qbixmex.github.io/heroes-app",
   "name": "07-heroes-app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://qbixmex.github.io/heroes-app",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
@@ -27,9 +27,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "yarn run build",
+    "predeploy": "yarn build",
     "deploy": "gh-pages -d build"
-    
   },
   "eslintConfig": {
     "extends": [

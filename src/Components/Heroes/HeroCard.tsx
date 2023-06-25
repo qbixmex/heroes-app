@@ -23,7 +23,7 @@ const HeroCard = ({ id, superhero }: Props) => {
             <div className="col-12">
               <img
                 className="img-fluid rounded"
-                src={ require(`../../Assets/heroes/${id}.jpg`) }
+                src={`/images/heroes/${id}.jpg`}
                 alt={superhero}
               />
             </div>
